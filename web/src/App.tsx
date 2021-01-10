@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {TaskController} from "./core/application/TaskController";
+import {InMemoryTaskRepository} from "./core/infrastructure/InMemoryTaskRepository";
 
 function App() {
+  let taskRepository = new InMemoryTaskRepository();
+  let taskController = new TaskController(taskRepository)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        taskController.getTasks().map(t =>
+            <h1>
+              {t.message}
+            </h1>)
+      }
     </div>
   );
 }
