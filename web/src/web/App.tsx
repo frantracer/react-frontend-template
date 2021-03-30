@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import {TaskController} from "./core/application/TaskController";
-import {InMemoryTaskRepository} from "./core/infrastructure/InMemoryTaskRepository";
-import TaskViewer from "./web/components/TaskViewer";
-import TaskAdder from "./web/components/TaskAdder";
-import TaskProvider from "./web/contexts/TaskContext";
+import {TaskController} from "../core/application/TaskController";
+import {InMemoryTaskRepository} from "../core/infrastructure/InMemoryTaskRepository";
+import TaskViewer from "./components/TaskViewer";
+import TaskAdder from "./components/TaskAdder";
+import TaskProvider from "./contexts/TaskContext";
 
 function App() {
     let taskRepository = new InMemoryTaskRepository();
