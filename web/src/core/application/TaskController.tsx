@@ -1,7 +1,7 @@
 import { Task } from "../domain/Task";
 import { TaskRepository } from "./TaskRepository";
 
-interface ITaskController {
+export interface ITaskController {
     getTasks(): Task[]
     addTask(task: Task): any
 }

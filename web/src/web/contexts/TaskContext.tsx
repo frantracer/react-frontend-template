@@ -1,9 +1,9 @@
 import React, {FC, ReactNode, useEffect, useState} from "react";
 import {Task} from "../../core/domain/Task";
-import {TaskController} from "../../core/application/TaskController";
+import {ITaskController} from "../../core/application/TaskController";
 
 interface TaskContextProps {
-    controller: TaskController;
+    controller: ITaskController;
     children: ReactNode
 }
 
