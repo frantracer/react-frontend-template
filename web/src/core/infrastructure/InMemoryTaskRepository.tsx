@@ -1,4 +1,4 @@
-import {TaskRepository} from "../domain/TaskRepository";
+import {TaskRepository} from "../application/TaskRepository";
 import {Task} from "../domain/Task";
 
 class InMemoryTaskRepository implements TaskRepository {
@@ -12,6 +12,10 @@ class InMemoryTaskRepository implements TaskRepository {
 
     getTasks(): Task[] {
         return this.tasks;
+    }
+
+    addTask(task: Task): any {
+        this.tasks.push(task)
     }
 
 }

@@ -1,7 +1,12 @@
 import { Task } from "../domain/Task";
-import { TaskRepository } from "../domain/TaskRepository";
+import { TaskRepository } from "./TaskRepository";
 
-class TaskController {
+interface ITaskController {
+    getTasks(): Task[]
+    addTask(task: Task): any
+}
+
+class TaskController implements ITaskController {
     repository: TaskRepository;
 
     constructor(repository: TaskRepository) {
@@ -10,6 +15,10 @@ class TaskController {
 
     getTasks(): Task[] {
         return this.repository.getTasks();
+    }
+
+    addTask(task: Task): any {
+        this.repository.addTask(task)
     }
 }
 
