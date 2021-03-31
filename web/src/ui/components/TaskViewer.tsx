@@ -9,8 +9,8 @@ const TaskViewer = (props: TaskViewerProps) => {
     return (
         <>
             {
-                props.tasks.map(t =>
-                    <h1>
+                props.tasks.map((t, index) =>
+                    <h1 key={index}>
                         {t.message}
                     </h1>)
             }
