@@ -1,15 +1,15 @@
-import React, {FC} from 'react';
-import {TasksContextType, TaskContext} from "../contexts/TaskContext";
+import React from 'react';
+import {Task} from "../../core/domain/Task";
 
-interface TaskViewerProps {}
+interface TaskViewerProps {
+    tasks: Task[]
+}
 
-const TaskViewer: FC<TaskViewerProps> = () => {
-    const { tasks } = React.useContext(TaskContext) as TasksContextType;
-
+const TaskViewer = (props: TaskViewerProps) => {
     return (
         <>
             {
-                tasks.map(t =>
+                props.tasks.map(t =>
                     <h1>
                         {t.message}
                     </h1>)

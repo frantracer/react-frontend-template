@@ -1,18 +1,17 @@
-import React, { FC } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 import {Task} from "../../core/domain/Task";
-import {TaskContext, TasksContextType} from "../contexts/TaskContext";
 
-interface TaskAdderProps {}
+interface TaskAdderProps {
+    onTaskAdded: (t: Task) => void
+}
 
-const TaskAdder: FC<TaskAdderProps> = () => {
-    const { saveTask } = React.useContext(TaskContext) as TasksContextType;
-
+const TaskAdder = (props: TaskAdderProps) => {
     let task = new Task("hello", new Date())
     return (
         <>
             {
-                <Button variant="primary" onClick={() => saveTask(task)}>Add task</Button>
+                <Button variant="primary" onClick={() => props.onTaskAdded(task)}>Add task</Button>
             }
         </>
     );
