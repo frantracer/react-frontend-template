@@ -1,4 +1,4 @@
-import { Task } from "../domain/Task"
+import { Task } from "../entities/Task"
 
 interface TaskRepository {
     getTasks(): Task[];

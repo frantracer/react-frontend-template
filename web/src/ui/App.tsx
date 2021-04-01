@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import {TaskController} from "../core/application/TaskController";
-import {InMemoryTaskRepository} from "../core/infrastructure/InMemoryTaskRepository";
+import {TaskController} from "../core/useCases/TaskController";
+import {InMemoryTaskRepository} from "../core/services/InMemoryTaskRepository";
 import TaskViewer from "./components/TaskViewer";
 import TaskAdder from "./components/TaskAdder";
-import {Task} from "../core/domain/Task";
+import {Task} from "../core/entities/Task";
 
 function App() {
     let taskRepository = new InMemoryTaskRepository();

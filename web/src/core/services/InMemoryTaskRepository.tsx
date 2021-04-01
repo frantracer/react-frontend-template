@@ -1,5 +1,5 @@
-import {TaskRepository} from "../application/TaskRepository";
-import {Task} from "../domain/Task";
+import {TaskRepository} from "../repositories/TaskRepository";
+import {Task} from "../entities/Task";
 
 class InMemoryTaskRepository implements TaskRepository {
     tasks: Task[];

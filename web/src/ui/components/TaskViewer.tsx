@@ -1,5 +1,5 @@
 import React from 'react';
-import {Task} from "../../core/domain/Task";
+import {Task} from "../../core/entities/Task";
 
 interface TaskViewerProps {
     tasks: Task[]

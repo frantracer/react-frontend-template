@@ -1,5 +1,5 @@
-import { Task } from "../domain/Task";
-import { TaskRepository } from "./TaskRepository";
+import { Task } from "../entities/Task";
+import { TaskRepository } from "../repositories/TaskRepository";
 
 export interface ITaskController {
     getTasks(): Task[]

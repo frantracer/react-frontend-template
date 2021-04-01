@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
-import {Task} from "../../core/domain/Task";
+import {Task} from "../../core/entities/Task";
 
 interface TaskAdderProps {
     onTaskAdded: (t: Task) => void
